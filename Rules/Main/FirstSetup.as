@@ -222,17 +222,17 @@ void LocalOrOnline(CRules@ this)
 	// caption1 is used to determine region!
 
 	@serverButton = UI::Button::Add("", ShowMultiplayerMenu, GridButtonRender, GridRenderCaption, false, 0.5f, 3);
-	serverButton.vars.set("caption1", "Online");
+	serverButton.vars.set("caption1", getTranslatedString("Online"));
 	serverButton.vars.set("caption2", "");
 	serverButton.vars.set("icon", 12);
-	serverButton.vars.set("description", "Play with more friends over the internet");
+	serverButton.vars.set("description", getTranslatedString("Play with more friends over the internet"));
 	serverButton.vars.set("players", "");
 
 	@serverButton = UI::Button::Add("", SelectGameLocal, GridButtonRender, GridRenderCaption, false, 0.5f, 3);
-	serverButton.vars.set("caption1", "Local");
+	serverButton.vars.set("caption1", getTranslatedString("Local"));
 	serverButton.vars.set("caption2", "");
 	serverButton.vars.set("icon", 11);
-	serverButton.vars.set("description", "1-4 players on this computer");
+	serverButton.vars.set("description", getTranslatedString("1-4 players on this computer"));
 	serverButton.vars.set("players", "");
 
 	UI::Transition(Vec2f(-1.0f, 0.0f));
@@ -260,17 +260,17 @@ void SelectGameLocal(CRules@ this, UI::Group@ group, UI::Control@ control)
 	// caption1 is used to determine region!
 
 	@serverButton = UI::Button::Add("", PlaySkirmish, GridButtonRender, GridRenderCaption, false, 0.5f, 3);
-	serverButton.vars.set("caption1", "Skirmish");
+	serverButton.vars.set("caption1", getTranslatedString("Skirmish"));
 	serverButton.vars.set("caption2", "");
 	serverButton.vars.set("icon", 14);
-	serverButton.vars.set("description", "1-4 humans or bots on one screen");
+	serverButton.vars.set("description", getTranslatedString("1-4 humans or bots on one screen"));
 	serverButton.vars.set("players", "");
 
 	@serverButton = UI::Button::Add("", PlayCampaign, GridButtonRender, GridRenderCaption, false, 0.5f, 3);
-	serverButton.vars.set("caption1", "Run");
+	serverButton.vars.set("caption1", getTranslatedString("Run"));
 	serverButton.vars.set("caption2", "");
 	serverButton.vars.set("icon", 13);
-	serverButton.vars.set("description", "Solo campaign against bots");
+	serverButton.vars.set("description", getTranslatedString("Solo campaign against bots"));
 	serverButton.vars.set("players", "");
 
 	UI::Transition(Vec2f(-1.0f, 0.0f));
@@ -294,10 +294,10 @@ void FirstSetupEscape(CRules@ this, UI::Group@ group, UI::Control@ control)
 	UI::SetFont("menu");
 	UI::AddGroup("firstsetup restart", Vec2f(0.2, 0.2), Vec2f(0.8, 0.8));
 	UI::Grid(2, 2);
-	UI::Button::Add("OPTIONS", ShowSetupMenu);
-	 UI::Label::Add("input, sound and player preferences");
-	UI::Button::Add("QUIT", SelectQuitGame);
-	 UI::Label::Add("exit to desktop");
+	UI::Button::Add(getTranslatedString("OPTIONS"), ShowSetupMenu);
+	 UI::Label::Add(getTranslatedString("input, sound and player preferences"));
+	UI::Button::Add(getTranslatedString("QUIT"), SelectQuitGame);
+	 UI::Label::Add(getTranslatedString("exit to desktop"));
 	UI::Transition(Vec2f(1.0f, 0.0f));
 	UI::SetLastSelection(0);
 }

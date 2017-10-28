@@ -42,18 +42,18 @@ void InitRankedServers()
 	{
 		//US
 
-		RankedServer(FL2 + ":50350", "LOBBY", "", 1, 0,
-		"USA lobby - no entry cost!", SelectServer, "USA")
+		RankedServer(FL2 + ":50350", getTranslatedString("LOBBY"), "", 1, 0,
+		getTranslatedString("USA lobby - no entry cost!"), SelectServer, "USA")
 
 		//EU
 
-		, RankedServer(EU3 + ":50350", "LOBBY", "", 1, 0,
-		"EU lobby - no entry cost!", SelectServer, "EU")
+		, RankedServer(EU3 + ":50350", getTranslatedString("LOBBY"), "", 1, 0,
+		getTranslatedString("EU lobby - no entry cost!"), SelectServer, "EU")
 
 		//AUS
 
-		, RankedServer(AU2 + ":50350", "LOBBY", "", 1, 0,
-		"AUS lobby - no entry cost!", SelectServer, "AUS")
+		, RankedServer(AU2 + ":50350", getTranslatedString("LOBBY"), "", 1, 0,
+		getTranslatedString("AUS lobby - no entry cost!"), SelectServer, "AUS")
 
 	};
 	for (u32 i = 0; i < _officialServers.length; i++)
@@ -67,7 +67,7 @@ void InitRankedServers()
 		RankedServer[] _testServers =
 		{
 			RankedServer(VINO + ":50425", "LOBBY", "", 1, 0,
-			"Test Build Lobby", SelectServer, "USA")
+			getTranslatedString("Test Build Lobby"), SelectServer, "USA")
 		};
 		for (u32 i = 0; i < _testServers.length; i++)
 		{

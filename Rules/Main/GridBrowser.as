@@ -50,7 +50,7 @@ void ShowGridBrowserInit(CRules@ this, UI::Group@ group, UI::Control@ control)
 
 	UI::AddGroup("servers downloading", Vec2f(0.1f, 0.0), Vec2f(1, 0.2));
 	UI::Grid(1, 1);
-	UI::Label::Add("Downloading servers list...");
+	UI::Label::Add(getTranslatedString("Downloading servers list..."));
 }
 
 void OnRequestList(CRules@ this)
@@ -68,7 +68,7 @@ void AddBack(CRules@ this)
 	UI::SetFont("hud");
 	UI::Grid(1, 1);
 	UI::SetSmallSelector();
-	UI::Button::Add("BACK", _backCallback);
+	UI::Button::Add(getTranslatedString("BACK"), _backCallback);
 	UI::Transition(Vec2f(0.0f, -1.0f));
 }
 
@@ -77,7 +77,7 @@ void AddBackLabel(CRules@ this)
 	UI::AddGroup("back", Vec2f(0.0f, 0.9f), Vec2f(1.0f, 0.99f));
 	UI::SetFont("hud");
 	UI::Grid(1, 1);
-	UI::Label::Add("<< BACK [ESC]");
+	UI::Label::Add(getTranslatedString("<< BACK [ESC]"));
 	UI::Transition(Vec2f(0.0f, -1.0f));
 }
 
@@ -86,7 +86,7 @@ void AddOptionsLabel(CRules@ this)
 	UI::AddGroup("back", Vec2f(0.0f, 0.9f), Vec2f(1.0f, 0.99f));
 	UI::SetFont("hud");
 	UI::Grid(1, 1);
-	UI::Label::Add("OPTIONS [ESC]");
+	UI::Label::Add(getTranslatedString("OPTIONS [ESC]"));
 	UI::Transition(Vec2f(0.0f, -1.0f));
 }
 
@@ -125,21 +125,21 @@ void ShowRegions(CRules@ this, UI::Group@ group, UI::Control@ control)
 	serverButton.vars.set("caption1", "AUS");
 	serverButton.vars.set("caption2", "");
 	serverButton.vars.set("icon", 17);
-	serverButton.vars.set("description", "Join region");
+	serverButton.vars.set("description", getTranslatedString("Join region"));
 	serverButton.vars.set("players", "" + getRankedPlayersCount("AUS"));
 
 	@serverButton = UI::Button::Add("", SelectRegion, GridButtonRender, GridRenderCaption, false, 0.5f, 3);
 	serverButton.vars.set("caption1", "EU");
 	serverButton.vars.set("caption2", "");
 	serverButton.vars.set("icon", 15);
-	serverButton.vars.set("description", "Join region");
+	serverButton.vars.set("description", getTranslatedString("Join region"));
 	serverButton.vars.set("players", "" + getRankedPlayersCount("EU"));
 
 	@serverButton = UI::Button::Add("", SelectRegion, GridButtonRender, GridRenderCaption, false, 0.5f, 3);
 	serverButton.vars.set("caption1", "USA");
 	serverButton.vars.set("caption2", "");
 	serverButton.vars.set("icon", 16);
-	serverButton.vars.set("description", "Join region");
+	serverButton.vars.set("description", getTranslatedString("Join region"));
 	serverButton.vars.set("players", "" + getRankedPlayersCount("USA"));
 
 	UI::SetLastSelection(-1);
@@ -338,7 +338,7 @@ void AddGridBrowser(APIServer@[]@ servers)
 	{
 		UI::AddGroup("no servers", Vec2f(0.1f, 0.0), Vec2f(1, 0.2));
 		UI::Grid(1, 1);
-		UI::Label::Add("There are currently no servers in this region. Try again later.");
+		UI::Label::Add(getTranslatedString("There are currently no servers in this region. Try again later."));
 	}
 
 	// push servers from testservers on to the grid
@@ -432,15 +432,15 @@ void Login(CRules@ this, UI::Group@ group, UI::Control@ control)
 	UI::SetFont("gui");
 
 
-	UI::Button::Add("New Account", SelecNewAccount);
-	UI::Label::Add("no TR, KAG or THD account?");
-	UI::Button::Add("Forgot?", SelectForgot);
-	UI::Label::Add("reset password or remind name");
-	UI::Toggle::Add("Remember me", SetRememberMe, auth_remember);
-	UI::Label::Add("save credentials for next time");
+	UI::Button::Add(getTranslatedString("New Account"), SelecNewAccount);
+	UI::Label::Add(getTranslatedString("no TR, KAG or THD account?"));
+	UI::Button::Add(getTranslatedString("Forgot?"), SelectForgot);
+	UI::Label::Add(getTranslatedString("reset password or remind name"));
+	UI::Toggle::Add(getTranslatedString("Remember me"), SetRememberMe, auth_remember);
+	UI::Label::Add(getTranslatedString("save credentials for next time"));
 	UI::Label::Add("");
 	UI::Label::Add("");
-	UI::Label::Add("Use your Trench Run, King Arthur's Gold or THD account credentials");
+	UI::Label::Add(getTranslatedString("Use your Trench Run, King Arthur's Gold or THD account credentials"));
 	UI::Label::Add("");
 
 	UI::Transition(Vec2f(0.0f, 1.0f));
@@ -452,11 +452,11 @@ void Login(CRules@ this, UI::Group@ group, UI::Control@ control)
 	UI::Grid(2, 3);
 
 	UI::TextInput::Add(auth_login, SetAuthLogin, false, 30);
-	UI::Label::Add("your account name");
+	UI::Label::Add(getTranslatedString("your account name"));
 	UI::TextInput::Add(Engine::getAuthPasswordDummy(), SetAuthPassword, true, 30);
-	UI::Label::Add("your account password");
-	UI::Button::Add("OK", SelectLogin);
-	UI::Label::Add("login");
+	UI::Label::Add(getTranslatedString("your account password"));
+	UI::Button::Add(getTranslatedString("OK"), SelectLogin);
+	UI::Label::Add(getTranslatedString("login"));
 
 	UI::Transition(Vec2f(-1.0f, 0.0f));
 	UI::SetSelection(-1);

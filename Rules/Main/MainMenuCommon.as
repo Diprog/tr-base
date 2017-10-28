@@ -212,14 +212,14 @@ void ShowSetupMenu(CRules@ this, UI::Group@ group, UI::Control@ control)
 	UI::SetFont("menu");
 	UI::AddGroup("setup", select_area_tl, select_area_br);
 		UI::Grid(2, 3);
-		UI::Button::Add("INPUT", ShowSetupInputMenu);
-		UI::Label::Add("set your keys");
+		UI::Button::Add(getTranslatedString("INPUT"), ShowSetupInputMenu);
+		UI::Label::Add(getTranslatedString("set your keys"));
 		//UI::Button::Add("VIDEO", ShowVideoMenu);
 		//UI::Label::Add("visual controls");
-		UI::Button::Add("SOUND", ShowSoundMenu);
-		UI::Label::Add("audio controls");
-		UI::Button::Add("PLAYER", ShowPlayerMenu);
-		UI::Label::Add("preferences & customization");
+		UI::Button::Add(getTranslatedString("SOUND"), ShowSoundMenu);
+		UI::Label::Add(getTranslatedString("audio controls"));
+		UI::Button::Add(getTranslatedString("PLAYER"), ShowPlayerMenu);
+		UI::Label::Add(getTranslatedString("preferences & customization"));
 		//UI::Button::Add("BACK", _backCallback);
 		//UI::Label::Add("to main menu");
 	UI::SetLastSelection();
@@ -376,13 +376,13 @@ void ShowPlayerMenu(CRules@ this, UI::Group@ group, UI::Control@ control)
 		UI::Grid(2, 4);
 
 		UI::TextInput::Add(cl_name, SetCharName, false, 20);
-		UI::Label::Add("your character name");
+		UI::Label::Add(getTranslatedString("your character name"));
 		//UI::Option::Add("Male|Female|Geti", SetGender, cl_sex);
 		//UI::Label::Add("your character gender");
 		UI::TextInput::Add(cl_clantag, SetClanName, false, 5);
-		UI::Label::Add("optional: clan name");
-		UI::Toggle::Add("Kids safe", SetKidsSafe, g_kidssafe);
-		UI::Label::Add("no gore or swearing");
+		UI::Label::Add(getTranslatedString("optional: clan name"));
+		UI::Toggle::Add(getTranslatedString("Kids safe"), SetKidsSafe, g_kidssafe);
+		UI::Label::Add(getTranslatedString("no gore or swearing"));
 		//UI::Toggle::Add("Team-mate names", SetTeammateNames, u_shownames);
 		//UI::Label::Add("Show names on players");
 		//UI::Toggle::Add("Chat bubbles", SetChatBubbles, cl_chatbubbles);
@@ -501,16 +501,16 @@ void ShowSoundMenu(CRules@ this, UI::Group@ group, UI::Control@ control)
 		UI::SetThinSelector();
 		UI::Grid(2, 5);
 
-		UI::Slider::Add("Sound volume", SetSoundVolume, s_volume*100, 5, 0, 100, "%");
-		UI::Label::Add("sound volume");
-		UI::Slider::Add("Music volume", SetMusicVolume, s_musicvolume*100, 5, 0, 100, "%");
-		UI::Label::Add("music volume");
-		UI::Toggle::Add("Game music", SetMusic, s_gamemusic);
-		UI::Label::Add("in game music on/off");
+		UI::Slider::Add(getTranslatedString("Sound volume"), SetSoundVolume, s_volume*100, 5, 0, 100, "%");
+		UI::Label::Add(getTranslatedString("sound volume"));
+		UI::Slider::Add(getTranslatedString("Music volume"), SetMusicVolume, s_musicvolume*100, 5, 0, 100, "%");
+		UI::Label::Add(getTranslatedString("music volume"));
+		UI::Toggle::Add(getTranslatedString("Game music"), SetMusic, s_gamemusic);
+		UI::Label::Add(getTranslatedString("in game music on/off"));
 		//UI::Toggle::Add("Sound effects", SetEffects, s_effects);
 		//UI::Label::Add("turn off if you have audio issues");
-		UI::Toggle::Add("Swap left/right", SetSwapChannels, s_swapchannels);
-		UI::Label::Add("Swap audio channels");
+		UI::Toggle::Add(getTranslatedString("Swap left/right"), SetSwapChannels, s_swapchannels);
+		UI::Label::Add(getTranslatedString("Swap audio channels"));
 
 		//UI::Button::Add("BACK", ShowSetupMenu);
 		//UI::Label::Add("to main menu");
