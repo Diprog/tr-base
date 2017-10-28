@@ -336,7 +336,8 @@ void SpawnPlayers(CRules@ this)
 		{
 			blob.getBrain().server_SetActive(true);
 			CPlayer@ player = blob.getPlayer();
-			player.server_setCharacterName(getCharacterFor(player.getTeamNum(),player.getClassNum()).name);
+			if (player !is null)
+				player.server_setCharacterName(getCharacterFor(player.getTeamNum(),player.getClassNum()).name);
 		}
 
 		// disable keys for warmup // SYNC!?
