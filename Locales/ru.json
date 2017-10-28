@@ -1,0 +1,67 @@
+{
+//FisrtSetup.as
+	"Online":"Онлайн",
+	"Play with more friends over the internet":"Играть с друзьями по интернету",
+	"Local":"Хотсит",
+	"1-4 players on this computer":"1-4 игрока на одном компьютере",
+	"Skirmish":"Схватка",
+	"1-4 humans or bots on one screen":"1-4 человека или бота на одном экране",
+	"Run":"Забег",
+	"Solo campaign against bots":"Одиночная компания против ботов",
+	"OPTIONS":"НАСТРОЙКИ",
+	"input, sound and player preferences":"управление, звук и настройки игрока",
+	"QUIT":"ВЫЙТИ",
+	"exit to desktop":"выход на рабочий стол",
+
+//MainMenuCommon.as
+	"INPUT":"УПРАВЛЕНИЕ",
+	"set your keys":"назначить клавиши",
+	"SOUND":"ЗВУК",
+	"audio controls":"настройки аудио",
+	"PLAYER":"ИГРОК",
+	"preferences & customization":"предпочтения и кастомизация",
+	"Sound volume":"Громкость звука",
+	"sound volume":"громкость звука",
+	"Music volume":"Громкость музыки",
+	"music volume":"громкость музыки",
+	"Game music":"Игровая музыка",
+	"in game music on/off":"вкл/выкл внутриигровую музыку",
+	"Swap left/right":"Поменять лево/право",
+	"Swap audio channels":"поменять местами аудио каналы",
+	"your character name":"имя вашего персонажа",
+	"optional: clan name":"необязательно: название клана",
+	"Kids safe":"Режим для детей",
+	"no gore or swearing":"без мата и ругательств",
+
+//GridBrowser.as
+	"BACK":"НАЗАД",
+	"<< BACK [ESC]":"<< НАЗАД [ESC]",
+	"OPTIONS [ESC]":"НАСТРОЙКИ [ESC]",
+
+	//Login screen
+	"New Account":"Новый аккаунт",
+	"no TR, KAG or THD account?":"нет аккаунта TR, KAG или THD?",
+	"Forgot?":"Забыли?",
+	"reset password or remind name":"сбросить пароль или напомнить имя",
+	"Remember me":"Запомнить меня",
+	"save credentials for next time":"запомнить учётные данные",
+	"Use your Trench Run, King Arthur's Gold or THD account credentials":"Используйте свой аккаунт Trench Run, King Arhur's Gold или THD",
+	"your account name":"имя вашего аккаунта",
+	"your account password":"пароль от вашего акаунта",
+	"OK":"OK",
+	"login":"войти",
+
+
+	//Servers
+	"Downloading servers list...":"Получение списка серверов...",
+	"There are currently no servers in this region. Try again later.":"В этом регионе нет доступных серверов. Попробуйте позже.",
+	"LOBBY":"ЛОББИ",
+	"USA lobby - no entry cost!":"Лобби США - бесплатный вход!",
+	"EU lobby - no entry cost!":"Лобби Европы - бесплатный вход!",
+	"AUS lobby - no entry cost!":"Лобби Австралии - бесплатный вход!",
+	"Test Build Lobby":"Лобби для тестирования игры",
+	"Join region":"Выберите регион",
+"END":"END"
+
+	
+}
